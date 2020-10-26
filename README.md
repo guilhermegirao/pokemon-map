@@ -1,5 +1,5 @@
 # pokemon-map
-Um sistema de mapa de andar baseado em Pokémon.
+Um simples sistema de mapa de andar baseado em Pokémon.
 
 ## Features
 - Sistema de Andar pelo mapa
