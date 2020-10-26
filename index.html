@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/sprites.js"></script>
+    <script src="js/npcs.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="images/mapas/mapa1/mapa.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="instructions">
+        🕹 Utilize as <b>setas do teclado</b> ou o <b>joystick</b> no canto
+        inferior do mapa para se movimentar:
+      </h3>
+      <div class="container-game">
+        <div id="game" style="pointer-events: none">
+          <img
+            src="images/sprites/1/1-S.png"
+            id="trainer-1"
+            class="trainer trainer-user"
+          />
+        </div>
+        <div id="arrows">
+          <img src="images/nav.png" alt="navigation" usemap="#m" />
+          <map name="m" id="m">
+            <area
+              shape="poly"
+              coords="43,43,88,3,-2,2"
+              href="javascript:void(0);"
+              onclick="Game.arrow(38)"
+            />
+            <area
+              shape="poly"
+              coords="42,44,45,42,89,-1,87,90"
+              href="javascript:void(0);"
+              onclick="Game.arrow(39)"
+            />
+            <area
+              shape="poly"
+              coords="1,89,43,45,88,89"
+              href="javascript:void(0);"
+              onclick="Game.arrow(40)"
+            />
+            <area
+              shape="poly"
+              coords="0,3,43,44,1,87"
+              href="javascript:void(0);"
+              onclick="Game.arrow(37)"
+            />
+          </map>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Um código desenvolvido com ❤️ por
+      <a
+        href="https://github.com/guilhermegirao"
+        title="Clique aqui para acessar meus repositórios no Github."
+        >Guilherme Girão</a
+      >.
+    </div>
+
+    <script>
+      User.id = 1;
+      Maps.map = 1;
+      Maps.players = ["TESTE PLAYER 1"];
+      Maps.players_position = [[11, 11]];
+      Maps.players_sprites = [1];
+
+      Game.load();
+      Npcs.npcToWalk(1);
+    </script>
+  </body>
+</html>

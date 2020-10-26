@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+body {
+  margin: 0 auto;
+  background-color: #eee;
+  font-family: "Montserrat", "sans-serif";
+}
+
+.instructions {
+  position: absolute;
+  top: 14%;
+  text-align: center;
+}
+
+#game {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  transform: scale(1.5);
+  transition: 0.15s;
+  background-repeat: no-repeat !important;
+}
+
+#arrows {
+  filter: opacity(0.7);
+  position: absolute;
+  z-index: 100;
+  bottom: 36px;
+  left: 40px;
+  transition: 0.15s;
+}
+
+#arrows:hover {
+  filter: opacity(1);
+}
+
+img[usemap],
+map area {
+  outline: none;
+}
+
+.trainer {
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  z-index: 10;
+}
+
+.npc {
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  z-index: 10;
+}
+
+.trainer-user {
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-align-content: center;
+  align-content: center;
+}
+
+.container-game {
+  margin-top: 30px;
+  display: inline-block;
+  -webkit-order: 0;
+  order: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  flex-shrink: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  -webkit-align-self: auto;
+  align-self: auto;
+  transform: scale(1.2);
+  overflow: hidden;
+  border-radius: 5px;
+  filter: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.3));
+}
+
+.footer {
+  padding: 20px;
+  text-align: right;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
