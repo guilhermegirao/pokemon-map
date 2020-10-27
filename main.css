@@ -7,9 +7,10 @@ body {
 }
 
 .instructions {
-  position: absolute;
-  top: 14%;
+  position: fixed;
+  top: 2%;
   text-align: center;
+  z-index: 100;
 }
 
 #game {
@@ -74,7 +75,6 @@ map area {
 }
 
 .container-game {
-  margin-top: 30px;
   display: inline-block;
   -webkit-order: 0;
   order: 0;
